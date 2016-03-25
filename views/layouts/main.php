@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'SI-PRO (Sistema de Proveedores)',
+        'brandLabel' => 'SIGA (Sistema Integral de Gestión Académica)',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,9 +37,13 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Proveedores', 'url' => ['/proveedores']],
-            ['label' => 'Compras', 'url' => ['/compras']],
-            ['label' => 'Pagos', 'url' => ['/pagos']],
+            ['label' => 'Alumnos', 'url' => ['/alumnos']],
+            ['label' => 'Profesores', 'url' => ['/profesores']],
+            ['label' => 'Examenes', 'url' => ['/examenes']],
+            ['label' => 'Materias', 'url' => ['/materias']],
+            ['label' => 'Divisiones', 'url' => ['/divisiones']],
+            ['label' => 'Asistencias', 'url' => ['/asistencias']],
+            ['label' => 'Ciclos', 'url' => ['/ciclos']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
