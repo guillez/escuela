@@ -33,7 +33,7 @@ UNIQUE KEY `registro` (`idalumno`,`idmateria`, `idciclo`)
 
 
 
-CREATE TABLE `asistencia` (
+CREATE TABLE `asistencias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idalumno` int(11) NOT NULL default 1,
   `idmateria` int(11) NOT NULL default 1,

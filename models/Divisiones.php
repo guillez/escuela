@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models;
+use app\models\Materias;
 
 use Yii;
 
@@ -47,4 +48,17 @@ class Divisiones extends \yii\db\ActiveRecord
             'activo' => 'Activo',
         ];
     }
+
+    public function getMaterias()
+    {
+        return $this->hasOne(Materias::className(), ['id' => 'idmateria']);
+    }
+
+    public function getProfesores()
+    {
+        return $this->hasOne(Profesores::className(), ['id' => 'idprofesor']);
+    }
+
+
+
 }
