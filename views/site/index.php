@@ -7,45 +7,37 @@ $this->title = 'Sistema de Proveedores';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Bienvenido a S.I.G.A.</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Sistema Integral de Gestión Académica</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+       
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+             <img data-src="gestion.png" class="img_1" src="gestion.png" alt="Image 1"/>
+                <h2>Gestión</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Mediante las configuraciones generales del sistema SIGA, se podra adaptar las características particulaes de las escuelas a la funcionalida deseada.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Alumnos</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                <p>Las actividades relacionadas con los alumnos permitiran que el sistema academico pueda registrar los datos importantes de los mismos como así también poder llevar el control de asistencia, divisiones y calificaciones respectivas.</p>
+<img data-src="alumno.png" class="img_1" src="alumno.png" alt="Image 1"/>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+ <img data-src="docente.jpg" class="img_1" src="docente.jpg" alt="Image 1"/>
+                <h2>Profesores</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>En lo relativo a los Docentes, el sistema permitira tener un registro de los mismos, las asignaturas asociadas y mantener un registro de estados de los mismos.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+             
             </div>
         </div>
 
