@@ -37,13 +37,34 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Alumnos', 'url' => ['/alumnos']],
-            ['label' => 'Profesores', 'url' => ['/profesores']],
-            ['label' => 'Examenes', 'url' => ['/examenes']],
-            ['label' => 'Materias', 'url' => ['/materias']],
-            ['label' => 'Divisiones', 'url' => ['/divisiones']],
-            ['label' => 'Asistencias', 'url' => ['/asistencias']],
-            ['label' => 'Ciclos', 'url' => ['/ciclos']],
+[ 
+           'label' => 'General',
+           'items' => [
+                ['label' => 'Ciclos Lectivos', 'url' => ['/ciclos']],
+                ['label' => 'Configuración de Materias', 'url' => ['/materias']],
+                ['label' => 'Configuración de Divisiones', 'url' => ['/divisiones']],
+            ],
+        ],   
+[
+           'label' => 'Alumnos',
+           'items' => [
+                        ['label' => 'Gestión de Alumnos', 'url' => ['/alumnos']],
+            		['label' => 'Gestión de Examenes', 'url' => ['/examenes']],
+		        ['label' => 'Gestión de Asistencias', 'url' => ['/asistencias']],
+		        ['label' => 'Trayectoria de Alumnos', 'url' => ['/trayectorias']],
+            ],
+        ],  
+[
+           'label' => 'Profesores',
+           'items' => [
+                        ['label' => 'Gestión de Profesores', 'url' => ['/profesores']],
+            		['label' => 'Gestión de Designaciones', 'url' => ['/designaciones']],
+
+            ],
+        ],  
+
+
+            
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

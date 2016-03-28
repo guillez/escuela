@@ -1,7 +1,6 @@
 <?php
 
 namespace app\models;
-use app\models\Materias;
 
 use Yii;
 
@@ -10,8 +9,6 @@ use Yii;
  *
  * @property integer $id
  * @property string $nombre
- * @property integer $idmateria
- * @property integer $idprofesor
  * @property integer $activo
  */
 class Divisiones extends \yii\db\ActiveRecord
@@ -30,7 +27,7 @@ class Divisiones extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idmateria', 'idprofesor', 'activo'], 'integer'],
+            [['activo'], 'integer'],
             [['nombre'], 'string', 'max' => 100],
         ];
     }
@@ -43,22 +40,7 @@ class Divisiones extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nombre' => 'Nombre',
-            'idmateria' => 'Idmateria',
-            'idprofesor' => 'Idprofesor',
             'activo' => 'Activo',
         ];
     }
-
-    public function getMaterias()
-    {
-        return $this->hasOne(Materias::className(), ['id' => 'idmateria']);
-    }
-
-    public function getProfesores()
-    {
-        return $this->hasOne(Profesores::className(), ['id' => 'idprofesor']);
-    }
-
-
-
 }

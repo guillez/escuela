@@ -18,8 +18,8 @@ class AsistenciasSearch extends Asistencias
     public function rules()
     {
         return [
-            [['id', 'idalumno', 'idmateria', 'iddivision', 'idciclo', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21', 'd22', 'd23', 'd24', 'd25', 'd26', 'd27', 'd28', 'd29', 'd30', 'd31'], 'integer'],
-            [['total'], 'number'],
+            [['id', 'idalumno', 'idciclo', 'mes'], 'integer'],
+            [['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21', 'd22', 'd23', 'd24', 'd25', 'd26', 'd27', 'd28', 'd29', 'd30', 'd31', 'total'], 'number'],
         ];
     }
 
@@ -61,9 +61,8 @@ class AsistenciasSearch extends Asistencias
         $query->andFilterWhere([
             'id' => $this->id,
             'idalumno' => $this->idalumno,
-            'idmateria' => $this->idmateria,
-            'iddivision' => $this->iddivision,
             'idciclo' => $this->idciclo,
+            'mes' => $this->mes,
             'd1' => $this->d1,
             'd2' => $this->d2,
             'd3' => $this->d3,

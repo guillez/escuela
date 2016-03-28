@@ -12,8 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'apellido')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'fecha_nacimiento')->textInput() ?>
@@ -31,6 +29,12 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'idestado')->textInput() ?>
+
+    <?= $form->field($model, 'serial')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'mac')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'tecnico')->textInput() ?>
 
     <?= $form->field($model, 'observaciones')->textInput(['maxlength' => true]) ?>
 

@@ -26,10 +26,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'idalumno',
-            'idmateria',
-            'iddivision',
             'idciclo',
-            // 'd1',
+            'mes',
+            'd1',
             // 'd2',
             // 'd3',
             // 'd4',

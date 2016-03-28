@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Asistencias */
+/* @var $model app\models\Trayectorias */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Asistencias', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Trayectorias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="asistencias-view">
+<div class="trayectorias-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -30,40 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'idalumno',
+            'iddivision',
             'idciclo',
-            'mes',
-            'd1',
-            'd2',
-            'd3',
-            'd4',
-            'd5',
-            'd6',
-            'd7',
-            'd8',
-            'd9',
-            'd10',
-            'd11',
-            'd12',
-            'd13',
-            'd14',
-            'd15',
-            'd16',
-            'd17',
-            'd18',
-            'd19',
-            'd20',
-            'd21',
-            'd22',
-            'd23',
-            'd24',
-            'd25',
-            'd26',
-            'd27',
-            'd28',
-            'd29',
-            'd30',
-            'd31',
-            'total',
         ],
     ]) ?>
 

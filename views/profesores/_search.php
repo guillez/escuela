@@ -17,15 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'apellido') ?>
-
     <?= $form->field($model, 'nombre') ?>
 
     <?= $form->field($model, 'fecha_nacimiento') ?>
 
     <?= $form->field($model, 'documento') ?>
 
-    <?php // echo $form->field($model, 'direccion') ?>
+    <?= $form->field($model, 'direccion') ?>
 
     <?php // echo $form->field($model, 'telefono') ?>
 
@@ -36,6 +34,12 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'email') ?>
 
     <?php // echo $form->field($model, 'idestado') ?>
+
+    <?php // echo $form->field($model, 'serial') ?>
+
+    <?php // echo $form->field($model, 'mac') ?>
+
+    <?php // echo $form->field($model, 'tecnico') ?>
 
     <?php // echo $form->field($model, 'observaciones') ?>
 

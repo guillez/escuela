@@ -11,9 +11,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <?= $form->field($model, 'apellido') ?>
         <?= $form->field($model, 'fecha_nacimiento') ?>
         <?= $form->field($model, 'idestado') ?>
+        <?= $form->field($model, 'tecnico') ?>
         <?= $form->field($model, 'nombre') ?>
         <?= $form->field($model, 'documento') ?>
         <?= $form->field($model, 'direccion') ?>
@@ -21,6 +21,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'cuil') ?>
         <?= $form->field($model, 'ingreso') ?>
         <?= $form->field($model, 'email') ?>
+        <?= $form->field($model, 'serial') ?>
+        <?= $form->field($model, 'mac') ?>
         <?= $form->field($model, 'observaciones') ?>
     
         <div class="form-group">

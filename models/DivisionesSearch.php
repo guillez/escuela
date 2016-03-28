@@ -18,7 +18,7 @@ class DivisionesSearch extends Divisiones
     public function rules()
     {
         return [
-            [['id', 'idmateria', 'idprofesor', 'activo'], 'integer'],
+            [['id', 'activo'], 'integer'],
             [['nombre'], 'safe'],
         ];
     }
@@ -60,8 +60,6 @@ class DivisionesSearch extends Divisiones
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'idmateria' => $this->idmateria,
-            'idprofesor' => $this->idprofesor,
             'activo' => $this->activo,
         ]);
 

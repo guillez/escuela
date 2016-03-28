@@ -2,32 +2,19 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\widgets\ActiveField;
-use yii\helpers\ArrayHelper;
-use yii\jui\DatePicker;
-
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Alumnos */
+/* @var $model app\models\Profesores */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="alumnos-form">
+<div class="profesores-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
 
-
-
-	<?php echo $form->field($model,'fecha_nacimiento')->
-		widget(DatePicker::className(),[
-		    'dateFormat' => 'yyyy-MM-dd',
-		    'clientOptions' => [
-		        'yearRange' => '-15:-10',
-		        'changeYear' => true],
-			'options' => ['class' => 'form-control', 'style' => 'width:25%']
-		]) ?>
+    <?= $form->field($model, 'fecha_nacimiento')->textInput() ?>
 
     <?= $form->field($model, 'documento')->textInput(['maxlength' => true]) ?>
 
@@ -42,17 +29,7 @@ use yii\jui\DatePicker;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
  <?= $form->field($model, 'idestado')->dropDownList(
-        array('1'=>'Aspirante',2 => 'Alumno', 3=> 'Egresado', 4=> 'Baja', 3=> 'Pase'),
-        array('options' => array('2'=>array('selected'=>true)))
-
-    ) ?>
-
-    <?= $form->field($model, 'serial')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'mac')->textInput(['maxlength' => true]) ?>
-
- <?= $form->field($model, 'tecnico')->dropDownList(
-        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST'),
+        array('1'=>'Activo',2 => 'No Activo'),
         array('options' => array('1'=>array('selected'=>true)))
 
     ) ?>
@@ -66,4 +43,3 @@ use yii\jui\DatePicker;
     <?php ActiveForm::end(); ?>
 
 </div>
-

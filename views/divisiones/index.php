@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\models\Materias;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\DivisionesSearch */
@@ -27,9 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'nombre',
-            'materias.nombre',
-            'profesores.apellido',
-            'profesores.nombre',
             'activo',
 
             ['class' => 'yii\grid\ActionColumn'],

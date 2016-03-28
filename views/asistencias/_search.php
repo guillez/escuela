@@ -19,13 +19,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idalumno') ?>
 
-    <?= $form->field($model, 'idmateria') ?>
-
-    <?= $form->field($model, 'iddivision') ?>
-
     <?= $form->field($model, 'idciclo') ?>
 
-    <?php // echo $form->field($model, 'd1') ?>
+    <?= $form->field($model, 'mes') ?>
+
+    <?= $form->field($model, 'd1') ?>
 
     <?php // echo $form->field($model, 'd2') ?>
 

@@ -18,8 +18,8 @@ class AlumnosSearch extends Alumnos
     public function rules()
     {
         return [
-            [['id', 'idestado'], 'integer'],
-            [['apellido', 'nombre', 'fecha_nacimiento', 'documento', 'direccion', 'telefono', 'cuil', 'ingreso', 'email', 'observaciones'], 'safe'],
+            [['id', 'idestado', 'tecnico'], 'integer'],
+            [['nombre', 'fecha_nacimiento', 'documento', 'direccion', 'telefono', 'cuil', 'ingreso', 'email', 'serial', 'mac', 'observaciones'], 'safe'],
         ];
     }
 
@@ -62,16 +62,18 @@ class AlumnosSearch extends Alumnos
             'id' => $this->id,
             'fecha_nacimiento' => $this->fecha_nacimiento,
             'idestado' => $this->idestado,
+            'tecnico' => $this->tecnico,
         ]);
 
-        $query->andFilterWhere(['like', 'apellido', $this->apellido])
-            ->andFilterWhere(['like', 'nombre', $this->nombre])
+        $query->andFilterWhere(['like', 'nombre', $this->nombre])
             ->andFilterWhere(['like', 'documento', $this->documento])
             ->andFilterWhere(['like', 'direccion', $this->direccion])
             ->andFilterWhere(['like', 'telefono', $this->telefono])
             ->andFilterWhere(['like', 'cuil', $this->cuil])
             ->andFilterWhere(['like', 'ingreso', $this->ingreso])
             ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'serial', $this->serial])
+            ->andFilterWhere(['like', 'mac', $this->mac])
             ->andFilterWhere(['like', 'observaciones', $this->observaciones]);
 
         return $dataProvider;

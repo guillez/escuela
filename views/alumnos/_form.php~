@@ -52,7 +52,7 @@ use yii\jui\DatePicker;
     <?= $form->field($model, 'mac')->textInput(['maxlength' => true]) ?>
 
  <?= $form->field($model, 'tecnico')->dropDownList(
-        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST'),
+        array('1'=>'NO',2 => 'Enviado'),
         array('options' => array('1'=>array('selected'=>true)))
 
     ) ?>

@@ -9,41 +9,40 @@ use Yii;
  *
  * @property integer $id
  * @property integer $idalumno
- * @property integer $idmateria
- * @property integer $iddivision
  * @property integer $idciclo
- * @property integer $d1
- * @property integer $d2
- * @property integer $d3
- * @property integer $d4
- * @property integer $d5
- * @property integer $d6
- * @property integer $d7
- * @property integer $d8
- * @property integer $d9
- * @property integer $d10
- * @property integer $d11
- * @property integer $d12
- * @property integer $d13
- * @property integer $d14
- * @property integer $d15
- * @property integer $d16
- * @property integer $d17
- * @property integer $d18
- * @property integer $d19
- * @property integer $d20
- * @property integer $d21
- * @property integer $d22
- * @property integer $d23
- * @property integer $d24
- * @property integer $d25
- * @property integer $d26
- * @property integer $d27
- * @property integer $d28
- * @property integer $d29
- * @property integer $d30
- * @property integer $d31
- * @property string $total
+ * @property integer $mes
+ * @property double $d1
+ * @property double $d2
+ * @property double $d3
+ * @property double $d4
+ * @property double $d5
+ * @property double $d6
+ * @property double $d7
+ * @property double $d8
+ * @property double $d9
+ * @property double $d10
+ * @property double $d11
+ * @property double $d12
+ * @property double $d13
+ * @property double $d14
+ * @property double $d15
+ * @property double $d16
+ * @property double $d17
+ * @property double $d18
+ * @property double $d19
+ * @property double $d20
+ * @property double $d21
+ * @property double $d22
+ * @property double $d23
+ * @property double $d24
+ * @property double $d25
+ * @property double $d26
+ * @property double $d27
+ * @property double $d28
+ * @property double $d29
+ * @property double $d30
+ * @property double $d31
+ * @property double $total
  */
 class Asistencias extends \yii\db\ActiveRecord
 {
@@ -61,9 +60,9 @@ class Asistencias extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idalumno', 'idmateria', 'iddivision', 'idciclo', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21', 'd22', 'd23', 'd24', 'd25', 'd26', 'd27', 'd28', 'd29', 'd30', 'd31'], 'integer'],
-            [['total'], 'number'],
-            [['idalumno', 'idmateria', 'idciclo'], 'unique', 'targetAttribute' => ['idalumno', 'idmateria', 'idciclo'], 'message' => 'The combination of Idalumno, Idmateria and Idciclo has already been taken.'],
+            [['idalumno', 'idciclo', 'mes'], 'integer'],
+            [['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21', 'd22', 'd23', 'd24', 'd25', 'd26', 'd27', 'd28', 'd29', 'd30', 'd31', 'total'], 'number'],
+            [['idalumno', 'idciclo', 'mes'], 'unique', 'targetAttribute' => ['idalumno', 'idciclo', 'mes'], 'message' => 'The combination of Idalumno, Idciclo and Mes has already been taken.'],
         ];
     }
 
@@ -75,9 +74,8 @@ class Asistencias extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'idalumno' => 'Idalumno',
-            'idmateria' => 'Idmateria',
-            'iddivision' => 'Iddivision',
             'idciclo' => 'Idciclo',
+            'mes' => 'Mes',
             'd1' => 'D1',
             'd2' => 'D2',
             'd3' => 'D3',

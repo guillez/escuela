@@ -2,21 +2,22 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Materias;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\AlumnosSearch */
+/* @var $searchModel app\models\DivisionesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Alumnos';
+$this->title = 'Divisiones';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="alumnos-index">
+<div class="divisiones-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Alumnos', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Divisiones', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -26,18 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'nombre',
-            'fecha_nacimiento',
-            'documento',
-            'direccion',
-            // 'telefono',
-            // 'cuil',
-            // 'ingreso',
-            // 'email:email',
-            // 'idestado',
-            // 'serial',
-            // 'mac',
-            // 'tecnico',
-            // 'observaciones',
+            'materias.nombre',
+            'profesores.apellido',
+            'profesores.nombre',
+            'activo',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
