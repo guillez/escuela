@@ -54,8 +54,15 @@ AppAsset::register($this);
 		        ['label' => 'Trayectoria de Alumnos', 'url' => ['/trayectorias']],
             ],
         ],  
+[
+           'label' => 'Profesores',
+           'items' => [
+                        ['label' => 'Gestión de Profesores', 'url' => ['/profesores']],
+            		['label' => 'Gestión de Designaciones', 'url' => ['/designaciones']],
 
-            ['label' => 'Profesores', 'url' => ['/profesores']],
+            ],
+        ],  
+
 
             
             Yii::$app->user->isGuest ? (
@@ -85,7 +92,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; De.Si.Em. (Desarrollo de Sistemas Empresariales) - <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

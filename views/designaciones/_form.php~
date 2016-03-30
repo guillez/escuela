@@ -32,12 +32,8 @@ use app\models\Profesores;
 
     ) ?>
 
+    <?= $form->field($model, 'idestado')->textInput() ?>
 
- <?= $form->field($model, 'idestado')->dropDownList(
-        array('1'=>'Activo',2 => 'Licencia'),
-        array('options' => array('1'=>array('selected'=>true)))
-
-    ) ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

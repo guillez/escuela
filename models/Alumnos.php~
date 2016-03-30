@@ -78,6 +78,6 @@ class Alumnos extends \yii\db\ActiveRecord
     public function getEstadosalumno()
     {
 		
-        return $this->hasOne(EstadosAlumno::className(),['id'=>'idestado'] );
+        return $this->hasOne(Proveedores::className(),['id'=>'idestado'] );
     }
 }

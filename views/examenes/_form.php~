@@ -25,7 +25,7 @@ use app\models\Divisiones;
     ) ?>
 
 <?= $form->field($model, 'iddivision')->dropDownList(
-        ArrayHelper::map(Divisiones::find()->all(),'id','nombre' )
+        ArrayHelper::map(Divisiones::find()->all(),'id','descripcion' )
 
     ) ?>
 

@@ -43,6 +43,8 @@ AppAsset::register($this);
                 ['label' => 'Ciclos Lectivos', 'url' => ['/ciclos']],
                 ['label' => 'Configuración de Materias', 'url' => ['/materias']],
                 ['label' => 'Configuración de Divisiones', 'url' => ['/divisiones']],
+                ['label' => 'Configuración de Estados Alumno', 'url' => ['/estados-alumno']],
+
             ],
         ],   
 [
@@ -92,7 +94,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; De.Si.Em. (Desarrollo de Sistemas Empresariales) - <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

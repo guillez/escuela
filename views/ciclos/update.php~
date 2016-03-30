@@ -2,15 +2,15 @@
 
 use yii\helpers\Html;
 
-
 /* @var $this yii\web\View */
 /* @var $model app\models\Ciclos */
 
-$this->title = 'Nuevo Ciclo Lectivo';
+$this->title = 'Update Ciclos: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Ciclos', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="ciclos-create">
+<div class="ciclos-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CiclosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -24,9 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'descripcion',
-            'activo',
+ [
+             'label'=>'Activo',
+             'format'=>'raw',
+             'value' => function($data){
+                 $url = "true.gif";
+		$url1 = "false.png";
+                 if($data['activo']) { return Html::img($url,['alt'=>'yii']); } else {return Html::img($url1,['alt'=>'yii']);};
+             }
+],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

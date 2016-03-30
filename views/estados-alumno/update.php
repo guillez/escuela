@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Ciclos */
+/* @var $model app\models\EstadosAlumno */
 
-$this->title = 'Modificar Ciclo Lectivo: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Ciclos', 'url' => ['index']];
+$this->title = 'Update Estados Alumno: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Estados Alumnos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="ciclos-update">
+<div class="estados-alumno-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

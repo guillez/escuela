@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\widgets\ActiveField;
 use yii\helpers\ArrayHelper;
 use yii\jui\DatePicker;
+use app\models\EstadosAlumno;
 
 
 /* @var $this yii\web\View */
@@ -41,9 +42,8 @@ use yii\jui\DatePicker;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
- <?= $form->field($model, 'idestado')->dropDownList(
-        array('1'=>'Aspirante',2 => 'Alumno', 3=> 'Egresado', 4=> 'Baja', 3=> 'Pase'),
-        array('options' => array('2'=>array('selected'=>true)))
+<?= $form->field($model, 'idestado')->dropDownList(
+        ArrayHelper::map(EstadosAlumno::find()->all(),'id','descripcion' )
 
     ) ?>
 
