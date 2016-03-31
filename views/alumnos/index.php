@@ -24,9 +24,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'nombre',
-            'fecha_nacimiento',
-            'documento',
-            'direccion',
+           // 'fecha_nacimiento',
+           // 'documento',
+           // 'direccion',
             'estadosalumno.descripcion',    
             // 'telefono',
             // 'cuil',
@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'serial',
             // 'mac',
             // 'tecnico',
-            // 'observaciones',
+             'observaciones',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

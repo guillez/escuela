@@ -43,7 +43,7 @@ use app\models\EstadosAlumno;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
 <?= $form->field($model, 'idestado')->dropDownList(
-        ArrayHelper::map(EstadosAlumno::find()->all(),'id','idestado' )
+        ArrayHelper::map(EstadosAlumno::find()->all(),'id','descripcion' )
 
     ) ?>
 
@@ -52,7 +52,7 @@ use app\models\EstadosAlumno;
     <?= $form->field($model, 'mac')->textInput(['maxlength' => true]) ?>
 
  <?= $form->field($model, 'tecnico')->dropDownList(
-        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST'),
+        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST',4 => 'Para Envio a ST'),
         array('options' => array('1'=>array('selected'=>true)))
 
     ) ?>

@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_nacimiento',
             'documento',
             'direccion',
-            'estados_alumno.descripcion',    
+            'estadosalumno.descripcion',    
             // 'telefono',
             // 'cuil',
             // 'ingreso',

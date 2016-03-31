@@ -32,11 +32,21 @@ use app\models\EstadosAlumno;
 
     <?= $form->field($model, 'documento')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'cuil')->textInput(['maxlength' => true]) ?>
+
+ <?= $form->field($model, 'tecnico')->dropDownList(
+        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST',4 => 'Para Envio a ST'),
+        array('options' => array('1'=>array('selected'=>true)))
+
+    ) ?>
+
+    <?= $form->field($model, 'serial')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'observaciones')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'direccion')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'cuil')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'ingreso')->textInput(['maxlength' => true]) ?>
 
@@ -47,17 +57,12 @@ use app\models\EstadosAlumno;
 
     ) ?>
 
-    <?= $form->field($model, 'serial')->textInput(['maxlength' => true]) ?>
+
 
     <?= $form->field($model, 'mac')->textInput(['maxlength' => true]) ?>
 
- <?= $form->field($model, 'tecnico')->dropDownList(
-        array('1'=>'No Posee Netbook',2 => 'En poder del Alumno',3 => 'Enviado a ST'),
-        array('options' => array('1'=>array('selected'=>true)))
 
-    ) ?>
 
-    <?= $form->field($model, 'observaciones')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
