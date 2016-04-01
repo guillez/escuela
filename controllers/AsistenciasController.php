@@ -35,12 +35,19 @@ class AsistenciasController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new AsistenciasSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+	if (isset($_GET['id'])) {
+		$searchModel = new AsistenciasSearch([ 'idalumno' => $_GET['id'], ] );
+	} else {
+		
+		$searchModel = new AsistenciasSearch();
+
+	};
+	$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+ 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+                    'dataProvider' => $dataProvider,
+                    'searchModel' => $searchModel,
         ]);
     }
 

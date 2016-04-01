@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Asistencias;
 
+$asistencias= new Asistencias();
 /* @var $this yii\web\View */
 /* @var $model app\models\Alumnos */
 
@@ -16,6 +18,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+       <?= Html::a('Asistencias', ['asistencias/index', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+       
+<p>
+<?php
+/*
+echo'<a href="./index.php/asistencias/veralumno/?id=1" 
+            class="btn btn-primary">mylinktext</a>';
+*/
+?>
+<p>
+
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
