@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'ingreso',
             // 'email:email',
             // 'idestado',
-            // 'serial',
+             'serial',
             // 'mac',
             // 'tecnico',
              'observaciones',

@@ -9,7 +9,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'frater522',
+            'cookieValidationKey' => 'margarita',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -27,9 +27,9 @@ $config = [
         'useFileTransport' => false,
         'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'your-host-domain e.g. smtp.gmail.com',
-            'username' => 'informatica@ucu.edu.ar',
-            'password' => '2015margarita',
+            'host' => 'smtp.gmail.com',
+            'username' => 'ingguillermoz@gmail.com',
+            'password' => '2009sistemas',
             'port' => '587',
             'encryption' => 'tls',
                         ],

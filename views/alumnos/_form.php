@@ -6,7 +6,7 @@ use yii\widgets\ActiveField;
 use yii\helpers\ArrayHelper;
 use yii\jui\DatePicker;
 use app\models\EstadosAlumno;
-
+use app\models\Divisiones;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Alumnos */
@@ -19,7 +19,10 @@ use app\models\EstadosAlumno;
 
     <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
 
+<?= $form->field($model, 'iddivision')->dropDownList(
+        ArrayHelper::map(Divisiones::find()->all(),'id','nombre' )
 
+    ) ?>
 
 	<?php echo $form->field($model,'fecha_nacimiento')->
 		widget(DatePicker::className(),[

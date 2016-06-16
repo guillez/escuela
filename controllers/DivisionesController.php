@@ -8,6 +8,9 @@ use app\models\DivisionesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use mPDF;
+use yii\db\Query;
+use yii\helpers\Html;
 
 /**
  * DivisionesController implements the CRUD actions for Divisiones model.
@@ -121,4 +124,54 @@ class DivisionesController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
+public function actionPdfasistencia($id)
+        {
+
+
+		$mpdf=new mPDF();
+        $mpdf->AddPage('utf-8','A4-V','V','',15,15,35,15,9,9,'V'); 
+		
+
+		 if (isset($_GET['id'])) {
+
+				$query = new Query; //->join('INNER JOIN', 't_cuentas', 't_cuentas_personas.idcuenta = t_cuentas.id')
+				$query->select(['alumnos.nombre as nombrealumno', 'divisiones.nombre as nombredivision'])->from('alumnos')->join('INNER JOIN', 'divisiones', 'divisiones.id = alumnos.iddivision')->where('iddivision='.$_GET['id']);
+				$command = $query->createCommand();
+				$data = $command->queryAll();
+
+					 //$html = '<h1>CUENTA: Top ' . $this->limit . ' cuentas</h1>';
+					 $html = '<table>';
+					$primer_linea=true;
+					 foreach ($data as $row) {
+						if($primer_linea) { 
+							$primer_linea=false;
+							$html = '<table border=1><tr><td colspan=1><h3>Division:'.$row['nombredivision'].' </h3></td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td><td>__/__/_____</td></tr>';
+						}
+						 $html .= '<tr>';
+
+						 $html .= '<td>' . $row['nombrealumno'] . '</td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+						 $html .= '<td></td>';
+
+
+					 }
+					 $html .= '</tr></table>';
+					$mpdf->WriteHTML($html);
+					//return Html::encode($html);
+		}
+		$mpdf->Output();
+        exit;
+
+
+
+
+        }
 }

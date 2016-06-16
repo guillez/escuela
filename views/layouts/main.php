@@ -27,13 +27,33 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'SIGA (Sistema Integral de Gestión Académica)',
+ 'brandLabel' => Html::img('@web/educacion_logo.png', ['alt'=>Yii::$app->name]),
+
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
+
+
+if(Yii::$app->user->isGuest) {
+              echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+            ['label' => 'Inicio', 'url' => ['/site/index']],
+            ['label' => 'Ingresar', 'url' => ['/site/login']],
+
+                ],
+              ]);
+            } else {
+
+
+
+
+
+
+
+   echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
@@ -81,10 +101,55 @@ AppAsset::register($this);
             )
         ],
     ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+              echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right'],
+                'items' => [
+
+            ['label' => 'Inicio', 'url' => ['/site/index']],
+            ['label' => 'Proveedores', 'url' => ['/proveedores']],
+            ['label' => 'Compras', 'url' => ['/compras']],
+            ['label' => 'Pagos', 'url' => ['/pagos']],
+                  ['label' => 'Salir', 'url' => ['/site/logout'], 'linkOptions' => ['data-method' => 'post'],],
+
+                ],
+              ]);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
     NavBar::end();
     ?>
 
-    <div class="container">
+    <div class="container"> <br>
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

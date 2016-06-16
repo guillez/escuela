@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "*",
         "dektrium/yii2-user": "*",
         "kartik-v/yii2-date-range": "dev-master",
-        "kartik-v/yii2-widgets": "dev-master"
+        "kartik-v/yii2-widgets": "dev-master",
+        "mpdf/mpdf": "dev-master"
 
     },
     "require-dev": {
